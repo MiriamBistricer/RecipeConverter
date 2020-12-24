@@ -16,6 +16,6 @@
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4
         </item>
         <item name="android:textColor">@color/design_default_color_primary_dark</item>
-        <item name="android:onClick">pick123</item>
+        <item name="android:onClick">pickNumberOfBatches</item>
     </style>
 </resources>

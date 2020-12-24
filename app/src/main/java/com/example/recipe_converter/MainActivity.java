@@ -13,6 +13,7 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private Snackbar mSnackBar;
@@ -58,10 +59,22 @@ public class MainActivity extends AppCompatActivity {
                 if (mSnackBar.isShown()) {
                     mSnackBar.dismiss();
                 }
-                Intent intent = new Intent(getApplicationContext(), IngredientActivity.class);
+                mSnackBar.setText("See recipe favorites in your preferred number of batches...")
+                        .show();
+               /* Intent intent = new Intent(getApplicationContext(), IngredientActivity.class);
               //intent.putExtra("GAME", mGame.getJSONFromCurrentGame());
-                startActivity(intent);
+                startActivity(intent);*/
             }
         });
+    }
+
+    public void pickNumberOfBatches(View view) {
+        Button button = (Button)view;
+        String buttonText = button.getText().toString();
+        double factor = buttonText.equals("1/2") ? .5 : Double.parseDouble(buttonText);
+
+        Intent intent = new Intent(getApplicationContext(), IngredientActivity.class);
+        intent.putExtra("FACTOR", factor);
+        startActivity(intent);
     }
 }

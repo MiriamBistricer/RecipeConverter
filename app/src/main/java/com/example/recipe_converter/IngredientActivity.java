@@ -17,15 +17,22 @@ public class IngredientActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_ingredients);
 
+        double factor = getFactor();
+        setupRV(factor);
+    }
+
+    private double getFactor() {
+        Bundle incomingData = getIntent().getExtras();
+        return incomingData == null ? 1 : incomingData.getDouble("FACTOR");
+    }
+
+    private void setupRV(double factor) {
         RecyclerView recyclerView = findViewById(R.id.ingredientsView);
-
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 1);
-
         recyclerView.setLayoutManager(gridLayoutManager);
-
-        IngredientAdapter ingredientAdapter = new IngredientAdapter(1, amounts, units, ingredients);
-
+        IngredientAdapter ingredientAdapter = new IngredientAdapter(factor, amounts, units, ingredients);
         recyclerView.setAdapter(ingredientAdapter);
     }
 }
