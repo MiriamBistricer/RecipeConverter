@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation = "vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        style="@style/basicText"
+        android:text="How many batches of cookies do you want to make?"
+        android:textSize="35dp"
+        android:layout_margin="16dp"
+        android:paddingTop="100dp"/>
+    <include layout="@layout/main_include_card_buttons"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        app:layout_anchorGravity="center"
+        app:srcCompat="@android:drawable/ic_dialog_info"
+        android:contentDescription="fab" />
+   <!-- <TextView
+        android:id="@+id/oil_amount"
+        style="@style/basicText" />
+   <TextView
+        android:text="@string/oil"
+        style="@style/basicText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+    <TextView
+        android:id="@+id/brown_sugar_amount"
+        style="@style/basicText"
+        />
+    <TextView
+        style="@style/basicText"
+        android:text="@string/brown_sugar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+    <TextView
+        android:id="@+id/white_sugar_amount"
+        style="@style/basicText"
+        />
+    <TextView
+        android:text="@string/white_sugar"
+        style="@style/basicText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+    <TextView
+        android:id="@+id/vanilla_amount"
+        style="@style/basicText"
+        />
+    <TextView
+        android:text="@string/vanilla_extract"
+        style="@style/basicText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+    <TextView
+        android:id="@+id/baking_soda_amount"
+        style="@style/basicText"
+        />
+    <TextView
+        style="@style/basicText"
+        android:text="@string/baking_soda"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+    <TextView
+        android:id="@+id/salt_amount"
+        style="@style/basicText"
+        />
+    <TextView
+        style="@style/basicText"
+        android:text="@string/salt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+    <TextView
+        android:id="@+id/eggs_amount"
+        style="@style/basicText"
+        />
+    <TextView
+        style="@style/basicText"
+        android:text="@string/eggs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+    <TextView
+        android:id="@+id/corn_starch_amount"
+        style="@style/basicText"
+        />
+    <TextView
+        style="@style/basicText"
+        android:text="@string/corn_starch"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+    <TextView
+        android:id="@+id/flour_amount"
+        style="@style/basicText"
+        />
+    <TextView
+        style="@style/basicText"
+        android:text="@string/flour"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+    <TextView
+        android:id="@+id/chocolate_amount"
+        style="@style/basicText"
+        />
+    <TextView
+        style="@style/basicText"
+        android:text="@string/chocolate_chips"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>-->
+</androidx.appcompat.widget.LinearLayoutCompat>

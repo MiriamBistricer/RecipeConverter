@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Recipe Converter</string>
+    <string name="action_settings">Settings</string>
+    <string name="oil">cup(s) oil</string>
+    <string name="brown_sugar">cup(s) brown sugar</string>
+    <string name="white_sugar">cup(s) white sugar</string>
+    <string name="vanilla_extract">teaspoon(s) vanilla extract</string>
+    <string name="baking_soda">teaspoon(s) baking soda</string>
+    <string name="salt">teaspoon(s) salt</string>
+    <string name="eggs">egg(s)</string>
+    <string name="corn_starch">tablespoons(s) corn starch</string>
+    <string name="flour">cup(s) flour</string>
+    <string name="chocolate_chips">cup(s) chocolate chips</string>
+</resources>
