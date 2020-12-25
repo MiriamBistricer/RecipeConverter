@@ -8,7 +8,7 @@
     android:id="@+id/ingredients"
     tools:context=".IngredientActivity">
 
-<androidx.recyclerview.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/ingredientsView"
     tools:context=".Ingredients"
     tools:listitem="@layout/rv_item"

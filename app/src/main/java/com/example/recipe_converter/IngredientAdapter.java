@@ -38,7 +38,9 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull IngredientViewHolder holder, int position) {
-        holder.tv_amount.setText(ingredients[position]);
+        holder.tv_amount.setText(""+amounts[position]);
+        holder.tv_unit.setText(units[position]);
+        holder.tv_description.setText(ingredients[position]);
     }
 
     @Override

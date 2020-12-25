@@ -1,11 +1,15 @@
 package com.example.recipe_converter;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
 public class IngredientActivity extends AppCompatActivity {
 
@@ -21,6 +25,12 @@ public class IngredientActivity extends AppCompatActivity {
 
         double factor = getFactor();
         setupRV(factor);
+        setUpToolbar();
+    }
+
+    private void setUpToolbar() {
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
     }
 
     private double getFactor() {
@@ -34,5 +44,12 @@ public class IngredientActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(gridLayoutManager);
         IngredientAdapter ingredientAdapter = new IngredientAdapter(factor, amounts, units, ingredients);
         recyclerView.setAdapter(ingredientAdapter);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home)
+            finish();
+        return super.onOptionsItemSelected(item);
     }
 }
